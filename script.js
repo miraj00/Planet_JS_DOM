@@ -46,3 +46,17 @@ function logAvgDiameter(Array1) {
 }
 
 
+//Add event handlers to the buttons so that the index variable
+// is incremented or decremented and the <p> is updated with the new number. 
+//The next button adds one to index. The previous button subtracts one from index.
+
+var index = 0;
+
+var previousButton =document.getElementById("previous");
+previousButton.addEventListener("click", ()=>{
+     index--;
+
+    let indVal = document.getElementById("indexValue");
+    indVal.innerText = index;
+});
+
