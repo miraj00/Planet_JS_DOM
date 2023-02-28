@@ -52,6 +52,7 @@ function logAvgDiameter(Array1) {
 
 var index = 0;
 
+//previous button
 var previousButton =document.getElementById("previous");
 previousButton.addEventListener("click", ()=>{
      index--;
@@ -60,3 +61,13 @@ previousButton.addEventListener("click", ()=>{
     indVal.innerText = index;
 });
 
+
+
+//next button
+var nextButton =document.getElementById("next");
+nextButton.addEventListener("click", ()=>{
+     index++;
+
+    let indVal = document.getElementById("indexValue");
+    indVal.innerText = index;
+});
