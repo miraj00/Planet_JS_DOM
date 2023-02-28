@@ -3,7 +3,7 @@ class planet{
     inner; 
     diameter; 
     color;
-    
+
     constructor(name, inner, diameter, color){
         this.name = name; 
         this.inner = inner; 
@@ -23,6 +23,8 @@ let planetsArray = [
    new planet("Neptune", false, 30599, "#456eff"),
 ]; 
 
-for ( var planetone of planetsArray) {
-    console.log(planetone);
+for ( var planetOne of planetsArray) {
+   
+    console.log(planetOne.name);
+
 }
