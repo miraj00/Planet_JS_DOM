@@ -23,8 +23,26 @@ let planetsArray = [
    new planet("Neptune", false, 30599, "#456eff"),
 ]; 
 
-for ( var planetOne of planetsArray) {
-   
-    console.log(planetOne.name);
+// console.log(planetsArray.length);
 
+// loop to log the name of each planet in the array.   - - - - - - - -  1
+for ( var planetOne of planetsArray) { 
+    console.log(planetOne.name);
 }
+
+// function that takes in array of planets  as a parameter 
+//and returns the average diameter of planets in the array    - - - - -  2
+logAvgDiameter(planetsArray);
+
+function logAvgDiameter(Array1) {
+
+    var sum = 0;
+    for ( let i=0; i< Array1.length; i++) {
+        sum += Array1[i].diameter;    
+    }
+
+    let avgDiameter= sum/Array1.length;
+    console.log( "Average Diameter : " + avgDiameter);
+}
+
+
