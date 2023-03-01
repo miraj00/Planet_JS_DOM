@@ -59,6 +59,8 @@ previousButton.addEventListener("click", ()=>{
 
     let indVal = document.getElementById("indexValue");
     indVal.innerText = index;
+
+    updatePlanetDisplay(index);
 });
 
 
@@ -70,4 +72,42 @@ nextButton.addEventListener("click", ()=>{
 
     let indVal = document.getElementById("indexValue");
     indVal.innerText = index;
+
+    console.log(index);
+    updatePlanetDisplay(index);
+   
 });
+
+
+console.log(index);
+
+function updatePlanetDisplay(index) {
+
+    // name display
+    let newName  = planetsArray[index].name;
+     let indPlanetName = document.getElementById("indvplanetName");
+     indPlanetName.innerText = newName;   
+
+
+    // core display
+     let core  = planetsArray[index].inner;
+     let innerCore = document.getElementById("inner");
+     if(core === true){ 
+        newCoreval = "Inner Planet"
+     } else {
+        newCoreval = "Outer Planet"
+     }   
+     innerCore.innerText = newCoreval; 
+     
+
+     // circle color
+     let newShape = document.getElementById("shape");
+     newShape.style.backgroundColor = planetsArray[index].color ;
+
+    // diameter display
+     let diameterVal  = planetsArray[index].diameter;  
+     let newDiamterVal = diameterVal/100;
+     newShape.style.width = `${newDiamterVal}px`;
+     newShape.style.height = `${newDiamterVal}px`;
+
+}
