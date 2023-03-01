@@ -48,7 +48,7 @@ function logAvgDiameter(Array1) {
 
 //Add event handlers to the buttons so that the index variable
 // is incremented or decremented and the <p> is updated with the new number. 
-//The next button adds one to index. The previous button subtracts one from index.
+//The next button adds one to index. The previous button subtracts one from index.      ---------- 3
 
 var index = 0;
 
@@ -116,6 +116,7 @@ function updatePlanetDisplay(index) {
 
 }
 
+// disable button function 
 function enableButtons(i) {
 
      var prev = document.getElementById('previous');

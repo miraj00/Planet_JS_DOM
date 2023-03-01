@@ -1,7 +1,10 @@
-### PLANET JS_DOM Application
-    This application uses, HTML, CSS, JS and DOM Manipulation. Phase 1 required console output of objects name and calculated average diameter. Phase 2 required adding index and buttons. Phase 3 required creating eventlistener, modifying styles, using functions and disabling buttons.   
+## PLANET JS_DOM Application
+    This application uses, HTML, CSS, JS and DOM Manipulation.
+    Phase 1 required console output of objects name and calculated average diameter.
+    Phase 2 required adding index and buttons. 
+    Phase 3 required creating eventlistener, modifying styles, using functions and disabling buttons.   
 
-## Langauges used : 
+## Langauges and tools used : 
 * HTML
 * CSS
 * Javascript
