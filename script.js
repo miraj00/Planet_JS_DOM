@@ -52,15 +52,20 @@ function logAvgDiameter(Array1) {
 
 var index = 0;
 
+updatePlanetDisplay(index);
+
+
 //previous button
 var previousButton =document.getElementById("previous");
 previousButton.addEventListener("click", ()=>{
-     index--;
+ 
+    index--;
 
     let indVal = document.getElementById("indexValue");
     indVal.innerText = index;
 
-    updatePlanetDisplay(index);
+    updatePlanetDisplay(index); 
+    enableButtons(index);
 });
 
 
@@ -68,19 +73,18 @@ previousButton.addEventListener("click", ()=>{
 //next button
 var nextButton =document.getElementById("next");
 nextButton.addEventListener("click", ()=>{
-     index++;
+
+    index++;
 
     let indVal = document.getElementById("indexValue");
     indVal.innerText = index;
-
-    console.log(index);
+    
     updatePlanetDisplay(index);
-   
+    enableButtons(index);
 });
 
 
-console.log(index);
-
+// updatePlanetDisplay
 function updatePlanetDisplay(index) {
 
     // name display
@@ -111,3 +115,24 @@ function updatePlanetDisplay(index) {
      newShape.style.height = `${newDiamterVal}px`;
 
 }
+
+function enableButtons(i) {
+
+     var prev = document.getElementById('previous');
+     var next = document.getElementById('next');
+    
+    if ( i <= 0){
+       prev.disabled = true;
+       next.disabled = false;
+    
+    }  else if ( i < planetsArray.length-1 )  {
+        next.disabled = false;
+        prev.disabled = false;
+    
+    }  else  {   
+       prev.disabled = false;
+       next.disabled = true; 
+    } 
+ 
+
+  }
